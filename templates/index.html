@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Iris Prediction</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+			background-color: #c0edfc;
+			font-family: "Helvetica";
+			text-align: center;
+		}
+
+		.head{
+			margin-top: 0px;
+			height: 100px;
+			width: 100%;
+			line-height:100px;
+			background-color: #87051d;
+			color: #fff1ab;
+			margin-top: 0px;
+		}
+		.form{
+			margin-top: 50px;
+			font-weight: bold;
+			font-size: 25px;
+			color: #142f54;
+			justify-content: True;
+		}
+
+		input{
+			font-size: 20px;
+			border-radius: 10px;
+			background:#fff1ab;
+			padding: 10px;
+			font-weight: bold;
+			color: #142f54;
+		}
+
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+		  -webkit-appearance: none;
+		  margin: 0;
+		}
+
+		/* Firefox */
+		input[type=number] {
+		  -moz-appearance: textfield;
+		}
+
+
+	</style>
+
+</head>
+
+<body>
+	<div class="head">
+		<h1 style="margin-top: 0px;">Iris Flower Prediction</h1>
+	</div>
+	
+	<div class="form">
+		<form action = "." method = "POST">
+			<label>Sepal Length :  </label><input type="number" step=any name="sepal_length" value="{{request.form.sepal_length}}" /><br><br>
+			<label>Sepal Width  &nbsp;&nbsp;:  </label><input type="number" step=any name="sepal_width" value="{{request.form.sepal_width}}"/><br><br>
+			<label>Petal Length :  </label><input type="number" step=any name="petal_length" value="{{request.form.petal_length}}"/><br><br>
+			<label>Petal Width  &nbsp;&nbsp;:  </label><input type="number" step=any name="petal_width" value="{{request.form.petal_width}}"/><br><br>
+			<input type="submit" name="btn_submit"><br><br>
+			<p>{{r}}</p>
+		</form>
+	</div>
+</body>
+</html>
